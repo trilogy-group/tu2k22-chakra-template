@@ -1,31 +1,62 @@
 import React from 'react'
-import { ChakraProvider, Center, Button, Text } from '@chakra-ui/react'
+import {
+  ChakraProvider,
+  SimpleGrid,
+  Text,
+  Button,
+  Input,
+  Box,
+  Icon
+} from '@chakra-ui/react'
+import { CopyIcon } from '@chakra-ui/icons'
 
 const App = () => (
   <ChakraProvider resetCSS>
-    <Center
+    <SimpleGrid
+      columns={4}
+      spacingX="10px"
+      spacingY={3}
       display="flex"
-      flexDirection="column"
-      alignItems="center"
-      justifyContent="flex-start"
-      m={16}
-      p={8}
-      backgroundColor="cyan.100"
-      bgGradient="linear(to right, green.200,blue.500)"
+      alignItems="space-around"
+      minChildWidth={2}
+      justifyContent="space-between"
+      color="blackAlpha.500"
+      flexDirection="row-reverse"
     >
-      <Text opacity={1} fontWeight="bold" fontSize="lg" letterSpacing="widest">
-        Some text blah blah blah
-      </Text>
-      <Button
-        variant="ghost"
-        size="md"
-        bgGradient="linear(to right, messenger.500,green.500)"
-        borderRadius={100}
-        border={20}
-      >
-        Test button
-      </Button>
-    </Center>
+      <Box display="flex" flexDirection="row-reverse">
+        <Button
+          variant="solid"
+          size="md"
+          colorScheme="red"
+          minWidth={20}
+          display="flex"
+        >
+          Logout
+        </Button>
+        <Input
+          mr="10px"
+          minWidth={2}
+          maxWidth={200}
+          color="pink.500"
+          display="flex"
+          value="Hi Ankush Pandey"
+          placeholder="Your name"
+          isReadOnly
+        />
+      </Box>
+      <Box display="flex" flexDirection="row-reverse">
+        <Box>
+          <Text display="flex" color="linkedin.500">
+            Live meeting analysis
+          </Text>
+        </Box>
+        <CopyIcon
+          display="flex"
+          flexDirection="row-reverse"
+          alignItems="space-around"
+        />
+      </Box>
+    </SimpleGrid>
   </ChakraProvider>
 )
 
