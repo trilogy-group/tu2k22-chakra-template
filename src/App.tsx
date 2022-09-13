@@ -1,31 +1,35 @@
 import React from 'react'
-import { ChakraProvider, Center, Button, Text } from '@chakra-ui/react'
+import {
+  ChakraProvider,
+  Box,
+  FormControl,
+  FormLabel,
+  Input,
+  FormErrorMessage
+} from '@chakra-ui/react'
 
 const App = () => (
   <ChakraProvider resetCSS>
-    <Center
+    <Box
+      backgroundColor="blackAlpha.200"
+      p={5}
       display="flex"
-      flexDirection="column"
+      justifyContent="center"
       alignItems="center"
-      justifyContent="flex-start"
-      m={16}
-      p={8}
-      backgroundColor="cyan.100"
-      bgGradient="linear(to right, green.200,blue.500)"
     >
-      <Text opacity={1} fontWeight="bold" fontSize="lg" letterSpacing="widest">
-        Some text blah blah blah
-      </Text>
-      <Button
-        variant="ghost"
-        size="md"
-        bgGradient="linear(to right, messenger.500,green.500)"
-        borderRadius={100}
-        border={20}
-      >
-        Test button
-      </Button>
-    </Center>
+      <Box backgroundColor="whiteAlpha.900" width="35%" p={5} borderRadius={5}>
+        <FormControl mb={2.5}>
+          <FormLabel>Email Address</FormLabel>
+          <Input placeholder="Enter your email address" />
+          <FormErrorMessage>Error message</FormErrorMessage>
+        </FormControl>
+        <FormControl>
+          <FormLabel>Password</FormLabel>
+          <Input placeholder="Enter your password" />
+          <FormErrorMessage>Error message</FormErrorMessage>
+        </FormControl>
+      </Box>
+    </Box>
   </ChakraProvider>
 )
 
