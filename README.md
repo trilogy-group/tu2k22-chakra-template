@@ -1,8 +1,8 @@
 ## Instructions to follow
 
-1. Create a new branch and name it `<ad>-ui-experiment`
+1. Open in devspaces or clone in local vscode.
 
-2. Open in devspaces or clone in local vscode.
+2. Create a new branch and name it `<ad>-ui-experiment`
 
 3. In the project directory, run the following command: `npm i && npm start`
 
