@@ -1,31 +1,18 @@
 import React from 'react'
-import { ChakraProvider, Center, Button, Text } from '@chakra-ui/react'
+import { ChakraProvider, Box, Text } from '@chakra-ui/react'
 
 const App = () => (
   <ChakraProvider resetCSS>
-    <Center
+    <Box
       display="flex"
+      justifyContent="flex-end"
+      minHeight="100vh"
       flexDirection="column"
-      alignItems="center"
-      justifyContent="flex-start"
-      m={16}
-      p={8}
-      backgroundColor="cyan.100"
-      bgGradient="linear(to right, green.200,blue.500)"
     >
-      <Text opacity={1} fontWeight="bold" fontSize="lg" letterSpacing="widest">
-        Some text blah blah blah
+      <Text display="flex" justifyContent="center">
+        Ⓒ 2022, Devfactory | Devfactory is an ESW Capital Group Company
       </Text>
-      <Button
-        variant="ghost"
-        size="md"
-        bgGradient="linear(to right, messenger.500,green.500)"
-        borderRadius={100}
-        border={20}
-      >
-        Test button
-      </Button>
-    </Center>
+    </Box>
   </ChakraProvider>
 )
 
