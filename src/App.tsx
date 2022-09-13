@@ -1,31 +1,30 @@
 import React from 'react'
-import { ChakraProvider, Center, Button, Text } from '@chakra-ui/react'
+import { ChakraProvider, Button, Box } from '@chakra-ui/react'
 
 const App = () => (
   <ChakraProvider resetCSS>
-    <Center
-      display="flex"
-      flexDirection="column"
-      alignItems="center"
-      justifyContent="flex-start"
-      m={16}
-      p={8}
-      backgroundColor="cyan.100"
-      bgGradient="linear(to right, green.200,blue.500)"
-    >
-      <Text opacity={1} fontWeight="bold" fontSize="lg" letterSpacing="widest">
-        Some text blah blah blah
-      </Text>
+    <Box m={2}>
       <Button
-        variant="ghost"
+        variant="solid"
         size="md"
-        bgGradient="linear(to right, messenger.500,green.500)"
-        borderRadius={100}
-        border={20}
+        colorScheme="cyan"
+        color="#ffffff"
+        minWidth={200}
       >
-        Test button
+        Create Meeting
       </Button>
-    </Center>
+    </Box>
+    <Box m={2}>
+      <Button
+        variant="solid"
+        size="md"
+        colorScheme="cyan"
+        color="#ffffff"
+        minWidth={200}
+      >
+        Zoom Integration
+      </Button>
+    </Box>
   </ChakraProvider>
 )
 
