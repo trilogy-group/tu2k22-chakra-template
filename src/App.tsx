@@ -1,30 +1,21 @@
 import React from 'react'
-import { ChakraProvider, Center, Button, Text } from '@chakra-ui/react'
+import { ChakraProvider, Center, Image, Text } from '@chakra-ui/react'
 
 const App = () => (
   <ChakraProvider resetCSS>
-    <Center
-      display="flex"
-      flexDirection="column"
-      alignItems="center"
-      justifyContent="flex-start"
-      m={16}
-      p={8}
-      backgroundColor="cyan.100"
-      bgGradient="linear(to right, green.200,blue.500)"
-    >
-      <Text opacity={1} fontWeight="bold" fontSize="lg" letterSpacing="widest">
-        Some text blah blah blah
+    <Center display="flex" flexDirection="column">
+      <Image
+        height="100px"
+        width="140px"
+        src="https://hbr.org/resources/images/article_assets/2020/03/Apr20_08_MichalBednarski.jpg"
+        mt={22}
+      />
+      <Text fontWeight="bold" mt={5} fontSize="3xl">
+        Live Meeting Analysis
       </Text>
-      <Button
-        variant="ghost"
-        size="md"
-        bgGradient="linear(to right, messenger.500,green.500)"
-        borderRadius={100}
-        border={20}
-      >
-        Test button
-      </Button>
+      <Text mt={5} fontStyle="italic">
+        Get insights about meeting in real time
+      </Text>
     </Center>
   </ChakraProvider>
 )
