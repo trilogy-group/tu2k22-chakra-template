@@ -1,31 +1,73 @@
 import React from 'react'
-import { ChakraProvider, Center, Button, Text } from '@chakra-ui/react'
+import { ChakraProvider, Container, Input, Text } from '@chakra-ui/react'
 
 const App = () => (
   <ChakraProvider resetCSS>
-    <Center
-      display="flex"
+    <div style={{
+      width:"100%",
+      
+    }}>
+    
+    <div style={{
+      display:"flex",
+      flexDirection:"column",
+      justifyContent: "center",
+      width: "300px",
+      margin:"auto",
+      padding:"20px"
+    }}>
+      <h1>Conventional Coding</h1>
+      <label style={{
+        marginTop:"20px",
+        marginBottom:"5px"
+      }} >Email</label>
+      <input type="text" style={{
+        padding:"10px",
+        borderRadius: "8px",
+        border:"1px grey solid",
+      }} placeholder='Enter your email address' />
+      <label style={{
+        marginTop:"20px",
+        marginBottom:"10px"
+      }}>Password</label>
+      <input type="text" style={{
+        padding:"10px",
+        borderRadius: "8px",
+        border:"1px grey solid",
+      }} placeholder='Enter your password' />
+
+    </div>
+    </div>
+
+  <Container
+      display="block"
       flexDirection="column"
+      justifyContent="center"
       alignItems="center"
-      justifyContent="flex-start"
-      m={16}
-      p={8}
-      backgroundColor="cyan.100"
-      bgGradient="linear(to right, green.200,blue.500)"
+      width="100%"
     >
-      <Text opacity={1} fontWeight="bold" fontSize="lg" letterSpacing="widest">
-        Some text blah blah blah
-      </Text>
-      <Button
-        variant="ghost"
-        size="md"
-        bgGradient="linear(to right, messenger.500,green.500)"
-        borderRadius={100}
-        border={20}
-      >
-        Test button
-      </Button>
-    </Center>
+      <Container display="flex" flexDirection="column" width="300px" m="auto">
+        <h1>OpenChakra builder</h1>
+        <Text mt="20px" mb="5px">
+          Email
+        </Text>
+        <Input
+          placeholder="Enter email address"
+          p="10px"
+          borderRadius="8px"
+          border="1px grey solid"
+        />
+        <Text mt="20px" mb="5px">
+          Password
+        </Text>
+        <Input
+          placeholder="Enter email address"
+          p="10px"
+          borderRadius="8px"
+          border="1px grey solid"
+        />
+      </Container>
+    </Container>
   </ChakraProvider>
 )
 
